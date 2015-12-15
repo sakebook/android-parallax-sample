@@ -8,7 +8,11 @@ import android.os.Bundle;
 import android.util.SparseArray;
 import android.view.View;
 
+import com.sakebook.android.sample.parallaxsample.fragments.FifthFragment;
 import com.sakebook.android.sample.parallaxsample.fragments.FirstFragment;
+import com.sakebook.android.sample.parallaxsample.fragments.FourthFragment;
+import com.sakebook.android.sample.parallaxsample.fragments.SecondFragment;
+import com.sakebook.android.sample.parallaxsample.fragments.ThirdFragment;
 
 public class MainActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener{
 
@@ -38,11 +42,10 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
 
     private SparseArray<Fragment> makeFragments() {
         viewSparseArray.put(0, new FirstFragment());
-        viewSparseArray.put(1, new FirstFragment());
-        viewSparseArray.put(2, new FirstFragment());
-        viewSparseArray.put(3, new FirstFragment());
-        viewSparseArray.put(4, new FirstFragment());
-        viewSparseArray.put(5, new FirstFragment());
+        viewSparseArray.put(1, new SecondFragment());
+        viewSparseArray.put(2, new ThirdFragment());
+        viewSparseArray.put(3, new FourthFragment());
+        viewSparseArray.put(4, new FifthFragment());
         return viewSparseArray;
 
     }
