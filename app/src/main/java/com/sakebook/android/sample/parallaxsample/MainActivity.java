@@ -32,12 +32,11 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
         FragmentManager fragmentManager = getSupportFragmentManager();
         adapter = new ParallaxPagerAdapter(fragmentManager, this, makeFragments());
         viewPager.setAdapter(adapter);
-        viewPager.setPageMargin(80);
-        viewPager.setPageMarginDrawable(R.mipmap.ic_launcher);
-//        viewPager.setOffscreenPageLimit(3);
+        viewPager.setPageMargin(16);
+//        viewPager.setPageMarginDrawable(R.mipmap.ic_launcher);
+//        viewPager.setOffscreenPageLimit(4);
         viewPager.addOnPageChangeListener(this);
-//        viewPager.setPageTransformer(false, new GradationTransformer());
-//        viewPager.setPageTransformer(false, new ZoomOutPageTransformer());
+        viewPager.setPageTransformer(false, new ParallaxTransformer());
     }
 
     private SparseArray<Fragment> makeFragments() {

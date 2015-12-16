@@ -2,14 +2,24 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@android:color/darker_gray"
+    android:id="@+id/layout_fifth"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <ImageView
+        android:id="@+id/image_back"
         android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/nature"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        style="@style/TextTitle"
         android:text="5"
-        android:textColor="@android:color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
