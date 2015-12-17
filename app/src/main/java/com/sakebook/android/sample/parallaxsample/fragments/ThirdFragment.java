@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.sakebook.android.sample.parallaxsample.R;
 
@@ -20,5 +21,15 @@ public class ThirdFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_third_layout, null);
+    }
+
+
+    public static class ViewHolder {
+
+        public TextView title;
+
+        public ViewHolder(View view) {
+            title = (TextView) view.findViewById(R.id.text_title);
+        }
     }
 }

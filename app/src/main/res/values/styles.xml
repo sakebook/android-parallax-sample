@@ -14,4 +14,10 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="TextSubTitle">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
 </resources>

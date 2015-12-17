@@ -2,8 +2,12 @@ package com.sakebook.android.sample.parallaxsample;
 
 import android.graphics.Color;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewParent;
 import android.widget.TextView;
+
+import com.sakebook.android.sample.parallaxsample.fragments.ThirdFragment;
 
 /**
  * Created by sakemotoshinya on 15/12/16.
@@ -47,37 +51,75 @@ public class ParallaxTransformer implements ViewPager.PageTransformer{
                 fifthTransition(view, position, alpha);
                 break;
         }
-
     }
 
     private void firstTransition(View view, float position, float alpha) {
+        FragmentViewHolder.FirstViewHolder holder;
+        if (view.getTag() == null) {
+            holder = new FragmentViewHolder.FirstViewHolder(view);
+            view.setTag(holder);
+        } else {
+            holder = (FragmentViewHolder.FirstViewHolder) view.getTag();
+        }
+
         int width = view.getWidth();
-        View image = view.findViewById(R.id.image_back);
-        image.setTranslationX(- width / 2 * position);
+        holder.title.setTranslationX(- width * position);
+        holder.backImage.setTranslationX(- width / 2 * position);
     }
 
     private void secondTransition(View view, float position, float alpha) {
+        FragmentViewHolder.SecondViewHolder holder;
+        if (view.getTag() == null) {
+            holder = new FragmentViewHolder.SecondViewHolder(view);
+            view.setTag(holder);
+        } else {
+            holder = (FragmentViewHolder.SecondViewHolder) view.getTag();
+        }
+
         int width = view.getWidth();
-        View image = view.findViewById(R.id.image_back);
-        image.setTranslationX(- width / 2 * position);
+        holder.title.setTranslationX(- width * position);
+        holder.backImage.setTranslationX(- width / 2 * position);
     }
 
     private void thirdTransition(View view, float position, float alpha) {
+        FragmentViewHolder.ThirdViewHolder holder;
+        if (view.getTag() == null) {
+            holder = new FragmentViewHolder.ThirdViewHolder(view);
+            view.setTag(holder);
+        } else {
+            holder = (FragmentViewHolder.ThirdViewHolder) view.getTag();
+        }
+
         int width = view.getWidth();
-        View image = view.findViewById(R.id.image_back);
-        image.setTranslationX(- width / 2 * position);
+        holder.title.setTranslationX(- width * position);
+        holder.backImage.setTranslationX(- width / 2 * position);
     }
 
     private void fourthTransition(View view, float position, float alpha) {
+        FragmentViewHolder.FourthViewHolder holder;
+        if (view.getTag() == null) {
+            holder = new FragmentViewHolder.FourthViewHolder(view);
+            view.setTag(holder);
+        } else {
+            holder = (FragmentViewHolder.FourthViewHolder) view.getTag();
+        }
+
         int width = view.getWidth();
-        View image = view.findViewById(R.id.image_back);
-        image.setTranslationX(- width / 2 * position);
+        holder.title.setTranslationX(- width * position);
+        holder.backImage.setTranslationX(- width / 2 * position);
     }
 
     private void fifthTransition(View view, float position, float alpha) {
-        int width = view.getWidth();
-        View image = view.findViewById(R.id.image_back);
-        image.setTranslationX(- width / 2 * position);
-    }
+        FragmentViewHolder.FifthViewHolder holder;
+        if (view.getTag() == null) {
+            holder = new FragmentViewHolder.FifthViewHolder(view);
+            view.setTag(holder);
+        } else {
+            holder = (FragmentViewHolder.FifthViewHolder) view.getTag();
+        }
 
+        int width = view.getWidth();
+        holder.title.setTranslationX(- width * position);
+        holder.backImage.setTranslationX(- width / 2 * position);
+    }
 }

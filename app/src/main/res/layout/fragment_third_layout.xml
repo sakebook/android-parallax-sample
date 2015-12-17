@@ -23,4 +23,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+    <TextView
+        android:id="@+id/text_sub_title"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/text_title"
+        android:layout_marginTop="@dimen/large_margin"
+        style="@style/TextSubTitle"
+        android:text="subTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
 </RelativeLayout>
