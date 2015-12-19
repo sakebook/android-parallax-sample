@@ -3,4 +3,10 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="red_title">This is red</string>
+    <string name="green_title">This is green</string>
+    <string name="purple_title">This is purple</string>
+    <string name="orange_title">This is orange</string>
+    <string name="blue_title">This is blue</string>
+
 </resources>

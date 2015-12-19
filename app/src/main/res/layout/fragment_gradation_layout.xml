@@ -1,14 +1,27 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:id="@+id/layout_gradation"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="com.sakebook.android.sample.parallaxsample.fragments.GradationFragment">
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sakebook.android.sample.parallaxsample.fragments.GradationFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:id="@+id/layout_gradation"
+        android:layout_marginTop="300dp"
+        android:background="@android:color/white"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"/>
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text_gradation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="24dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="44sp"
+            tools:text="@string/hello_blank_fragment"/>
+
+
+    </RelativeLayout>
 
 </FrameLayout>

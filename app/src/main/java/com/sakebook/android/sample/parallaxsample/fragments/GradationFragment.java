@@ -4,11 +4,13 @@ package com.sakebook.android.sample.parallaxsample.fragments;
 import android.os.Bundle;
 import android.support.annotation.ColorRes;
 import android.support.annotation.IdRes;
+import android.support.annotation.StringRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.sakebook.android.sample.parallaxsample.R;
 
@@ -19,17 +21,17 @@ import com.sakebook.android.sample.parallaxsample.R;
  */
 public class GradationFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
-    private static final String ARG_COLOR = "color";
+    private static final String ARG_STRING = "string";
 
-    private int mColor;
+    private int mStringRes;
 
     public GradationFragment() {
     }
 
-    public static GradationFragment newInstance(@ColorRes int colorId) {
+    public static GradationFragment newInstance(@StringRes int stringId) {
         GradationFragment fragment = new GradationFragment();
         Bundle args = new Bundle();
-        args.putInt(ARG_COLOR, colorId);
+        args.putInt(ARG_STRING, stringId);
         fragment.setArguments(args);
         return fragment;
     }
@@ -38,7 +40,7 @@ public class GradationFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mColor = getArguments().getInt(ARG_COLOR);
+            mStringRes = getArguments().getInt(ARG_STRING);
         }
     }
 
@@ -46,7 +48,7 @@ public class GradationFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_gradation_layout, container, false);
-        view.findViewById(R.id.layout_gradation).setBackgroundColor(ContextCompat.getColor(getContext(), mColor));
+        ((TextView)view.findViewById(R.id.text_gradation)).setText(mStringRes);
         return view;
     }
 

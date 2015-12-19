@@ -15,12 +15,15 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".acitvities.ImageActivity">
-        </activity>
-        <activity android:name=".acitvities.GradationActivity">
-        </activity>
-        <activity android:name=".acitvities.IndicatorActivity">
-        </activity>
+        <activity
+            android:name=".acitvities.ImageActivity"
+            android:theme="@style/TutorialTheme"/>
+        <activity
+            android:name=".acitvities.GradationActivity"
+            android:theme="@style/TutorialTheme"/>
+        <activity
+            android:name=".acitvities.IndicatorActivity"
+            android:theme="@style/TutorialTheme"/>
     </application>
 
 </manifest>
