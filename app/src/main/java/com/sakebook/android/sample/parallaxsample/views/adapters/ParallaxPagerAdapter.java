@@ -1,4 +1,4 @@
-package com.sakebook.android.sample.parallaxsample;
+package com.sakebook.android.sample.parallaxsample.views.adapters;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;

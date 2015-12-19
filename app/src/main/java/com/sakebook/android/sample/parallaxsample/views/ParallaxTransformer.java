@@ -1,4 +1,4 @@
-package com.sakebook.android.sample.parallaxsample;
+package com.sakebook.android.sample.parallaxsample.views;
 
 import android.graphics.Color;
 import android.support.v4.view.ViewPager;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewParent;
 import android.widget.TextView;
 
+import com.sakebook.android.sample.parallaxsample.FragmentViewHolder;
+import com.sakebook.android.sample.parallaxsample.R;
 import com.sakebook.android.sample.parallaxsample.fragments.ThirdFragment;
 
 /**
