@@ -12,12 +12,38 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-    <View
+    <RelativeLayout
         android:id="@+id/layout_footer"
         android:layout_alignParentBottom="true"
         android:background="@color/colorPrimaryDark"
         android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"/>
+        android:layout_height="?android:attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/text_indicator_back"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/middle_margin"
+            android:padding="@dimen/middle_margin"
+            android:text="skip"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/text_indicator_next"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/middle_margin"
+            android:padding="@dimen/middle_margin"
+            android:text="next"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
 
     <View
         android:id="@+id/view_indicator_1"
