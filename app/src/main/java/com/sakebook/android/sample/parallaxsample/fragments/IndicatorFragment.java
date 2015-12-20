@@ -43,7 +43,7 @@ public class IndicatorFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_indicator_layout, container, false);
         ((TextView)view.findViewById(R.id.text_indicator)).setText(mString);
-        view.setBackgroundColor(Color.rgb((int)(Math.random() * 255), (int)(Math.random() * 255), (int)(Math.random() * 255));
+        view.setBackgroundColor(Color.rgb((int)(Math.random() * 255), (int)(Math.random() * 255), (int)(Math.random() * 255)));
         return view;
     }
 
