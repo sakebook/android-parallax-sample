@@ -9,6 +9,7 @@ import android.util.SparseArray;
 import android.view.View;
 import android.widget.TextView;
 
+import com.sakebook.android.sample.parallaxsample.fragments.IndicatorFragment;
 import com.sakebook.android.sample.parallaxsample.views.adapters.ParallaxPagerAdapter;
 import com.sakebook.android.sample.parallaxsample.views.ParallaxTransformer;
 import com.sakebook.android.sample.parallaxsample.R;
@@ -41,17 +42,17 @@ public class IndicatorActivity extends AppCompatActivity implements ViewPager.On
         FragmentManager fragmentManager = getSupportFragmentManager();
         adapter = new ParallaxPagerAdapter(fragmentManager, this, makeFragments());
         viewPager.setAdapter(adapter);
-        viewPager.setPageMargin(getResources().getDimensionPixelSize(R.dimen.small_margin));
         viewPager.addOnPageChangeListener(this);
-        viewPager.setPageTransformer(false, new ParallaxTransformer());
+//        viewPager.setPageMargin(getResources().getDimensionPixelSize(R.dimen.small_margin));
+//        viewPager.setPageTransformer(false, new ParallaxTransformer());
     }
 
     private SparseArray<Fragment> makeFragments() {
-        viewSparseArray.put(0, new FirstFragment());
-        viewSparseArray.put(1, new SecondFragment());
-        viewSparseArray.put(2, new ThirdFragment());
-        viewSparseArray.put(3, new FourthFragment());
-        viewSparseArray.put(4, new FifthFragment());
+        viewSparseArray.put(0, IndicatorFragment.newInstance("zero"));
+        viewSparseArray.put(1, IndicatorFragment.newInstance("one"));
+        viewSparseArray.put(2, IndicatorFragment.newInstance("two"));
+        viewSparseArray.put(3, IndicatorFragment.newInstance("three"));
+        viewSparseArray.put(4, IndicatorFragment.newInstance("four"));
         return viewSparseArray;
     }
 

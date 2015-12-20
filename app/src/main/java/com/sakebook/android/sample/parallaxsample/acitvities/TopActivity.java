@@ -31,6 +31,13 @@ public class TopActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        findViewById(R.id.button_transform_indicator).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TopActivity.this, TransformIndocatorActivity.class);
+                startActivity(intent);
+            }
+        });
         findViewById(R.id.button_image).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

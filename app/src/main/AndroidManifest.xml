@@ -24,6 +24,8 @@
         <activity
             android:name=".acitvities.IndicatorActivity"
             android:theme="@style/TutorialTheme"/>
+        <activity android:name=".acitvities.TransformIndocatorActivity">
+        </activity>
     </application>
 
 </manifest>

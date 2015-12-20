@@ -27,9 +27,17 @@
         android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/button_image"
+        android:id="@+id/button_transform_indicator"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/button_indicator"
+        android:text="to transform indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/button_image"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/button_transform_indicator"
         android:text="to image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

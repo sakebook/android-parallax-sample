@@ -1,12 +1,9 @@
 package com.sakebook.android.sample.parallaxsample.fragments;
 
-
+import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.ColorRes;
-import android.support.annotation.IdRes;
 import android.support.annotation.StringRes;
 import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,18 +11,21 @@ import android.widget.TextView;
 
 import com.sakebook.android.sample.parallaxsample.R;
 
-public class GradationFragment extends Fragment {
+/**
+ * Created by sakemotoshinya on 15/12/20.
+ */
+public class IndicatorFragment extends Fragment {
     private static final String ARG_STRING = "string";
 
-    private int mStringRes;
+    private String mString;
 
-    public GradationFragment() {
+    public IndicatorFragment() {
     }
 
-    public static GradationFragment newInstance(@StringRes int stringId) {
-        GradationFragment fragment = new GradationFragment();
+    public static IndicatorFragment newInstance(String str) {
+        IndicatorFragment fragment = new IndicatorFragment();
         Bundle args = new Bundle();
-        args.putInt(ARG_STRING, stringId);
+        args.putString(ARG_STRING, str);
         fragment.setArguments(args);
         return fragment;
     }
@@ -34,15 +34,16 @@ public class GradationFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mStringRes = getArguments().getInt(ARG_STRING);
+            mString = getArguments().getString(ARG_STRING);
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_gradation_layout, container, false);
-        ((TextView)view.findViewById(R.id.text_gradation)).setText(mStringRes);
+        View view = inflater.inflate(R.layout.fragment_indicator_layout, container, false);
+        ((TextView)view.findViewById(R.id.text_indicator)).setText(mString);
+        view.setBackgroundColor(Color.rgb((int)(Math.random() * 255), (int)(Math.random() * 255), (int)(Math.random() * 255));
         return view;
     }
 
