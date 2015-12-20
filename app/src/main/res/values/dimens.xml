@@ -1,7 +1,7 @@
 <resources>
     <dimen name="small_margin">8dp</dimen>
     <dimen name="middle_margin">16dp</dimen>
-    <dimen name="large_margin">32dp</dimen>
+    <dimen name="large_margin">24dp</dimen>
 
     <dimen name="clickable_margin">48dp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->
