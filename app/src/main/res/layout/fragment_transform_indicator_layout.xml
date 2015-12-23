@@ -15,7 +15,6 @@
         android:id="@+id/layout_indicator_transformer"
         android:orientation="horizontal"
         android:gravity="center"
-        android:background="@color/colorAccent"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize">
@@ -23,31 +22,31 @@
         <View
             android:id="@+id/view_indicator_1"
             android:layout_margin="@dimen/small_margin"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/circle"
             android:layout_width="@dimen/small_margin"
             android:layout_height="@dimen/small_margin"/>
         <View
             android:id="@+id/view_indicator_2"
             android:layout_margin="@dimen/small_margin"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/circle"
             android:layout_width="@dimen/small_margin"
             android:layout_height="@dimen/small_margin"/>
         <View
             android:id="@+id/view_indicator_3"
             android:layout_margin="@dimen/small_margin"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/circle"
             android:layout_width="@dimen/small_margin"
             android:layout_height="@dimen/small_margin"/>
         <View
             android:id="@+id/view_indicator_4"
             android:layout_margin="@dimen/small_margin"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/circle"
             android:layout_width="@dimen/small_margin"
             android:layout_height="@dimen/small_margin"/>
         <View
             android:id="@+id/view_indicator_5"
             android:layout_margin="@dimen/small_margin"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/circle"
             android:layout_width="@dimen/small_margin"
             android:layout_height="@dimen/small_margin"/>
 

@@ -50,7 +50,7 @@
         android:layout_toLeftOf="@+id/view_indicator_2"
         android:layout_alignTop="@+id/layout_footer"
         android:layout_marginTop="@dimen/large_margin"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/circle"
         android:layout_width="@dimen/small_margin"
         android:layout_height="@dimen/small_margin"/>
 
@@ -60,7 +60,7 @@
         android:layout_alignTop="@+id/layout_footer"
         android:layout_marginTop="@dimen/large_margin"
         android:layout_marginLeft="@dimen/small_margin"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/circle"
         android:layout_width="@dimen/small_margin"
         android:layout_height="@dimen/small_margin"/>
     <View
@@ -70,7 +70,7 @@
         android:layout_marginTop="@dimen/large_margin"
         android:layout_marginLeft="@dimen/small_margin"
         android:layout_marginRight="@dimen/small_margin"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/circle"
         android:layout_width="@dimen/small_margin"
         android:layout_height="@dimen/small_margin"/>
     <View
@@ -79,7 +79,7 @@
         android:layout_alignTop="@+id/layout_footer"
         android:layout_marginTop="@dimen/large_margin"
         android:layout_marginRight="@dimen/small_margin"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/circle"
         android:layout_width="@dimen/small_margin"
         android:layout_height="@dimen/small_margin"/>
     <View
@@ -87,13 +87,13 @@
         android:layout_toRightOf="@+id/view_indicator_4"
         android:layout_alignTop="@+id/layout_footer"
         android:layout_marginTop="@dimen/large_margin"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/circle"
         android:layout_width="@dimen/small_margin"
         android:layout_height="@dimen/small_margin"/>
 
     <View
         android:id="@+id/view_float_indicator"
-        android:background="@color/colorAccent"
+        android:background="@drawable/circle_hover"
         android:layout_alignLeft="@+id/view_indicator_1"
         android:layout_alignRight="@+id/view_indicator_1"
         android:layout_alignTop="@+id/view_indicator_1"
