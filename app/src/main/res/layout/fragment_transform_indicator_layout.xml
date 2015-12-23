@@ -1,0 +1,56 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text_transform_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="44sp"/>
+
+    <LinearLayout
+        android:id="@+id/layout_indicator_transformer"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/colorAccent"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <View
+            android:id="@+id/view_indicator_1"
+            android:layout_margin="@dimen/small_margin"
+            android:background="@color/colorPrimary"
+            android:layout_width="@dimen/small_margin"
+            android:layout_height="@dimen/small_margin"/>
+        <View
+            android:id="@+id/view_indicator_2"
+            android:layout_margin="@dimen/small_margin"
+            android:background="@color/colorPrimary"
+            android:layout_width="@dimen/small_margin"
+            android:layout_height="@dimen/small_margin"/>
+        <View
+            android:id="@+id/view_indicator_3"
+            android:layout_margin="@dimen/small_margin"
+            android:background="@color/colorPrimary"
+            android:layout_width="@dimen/small_margin"
+            android:layout_height="@dimen/small_margin"/>
+        <View
+            android:id="@+id/view_indicator_4"
+            android:layout_margin="@dimen/small_margin"
+            android:background="@color/colorPrimary"
+            android:layout_width="@dimen/small_margin"
+            android:layout_height="@dimen/small_margin"/>
+        <View
+            android:id="@+id/view_indicator_5"
+            android:layout_margin="@dimen/small_margin"
+            android:background="@color/colorPrimary"
+            android:layout_width="@dimen/small_margin"
+            android:layout_height="@dimen/small_margin"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
