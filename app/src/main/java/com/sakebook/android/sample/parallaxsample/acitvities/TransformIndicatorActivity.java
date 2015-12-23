@@ -8,14 +8,8 @@ import android.os.Bundle;
 import android.util.SparseArray;
 
 import com.sakebook.android.sample.parallaxsample.R;
-import com.sakebook.android.sample.parallaxsample.fragments.FifthFragment;
-import com.sakebook.android.sample.parallaxsample.fragments.FirstFragment;
-import com.sakebook.android.sample.parallaxsample.fragments.FourthFragment;
-import com.sakebook.android.sample.parallaxsample.fragments.SecondFragment;
-import com.sakebook.android.sample.parallaxsample.fragments.ThirdFragment;
 import com.sakebook.android.sample.parallaxsample.fragments.TransformIndicatorFragment;
 import com.sakebook.android.sample.parallaxsample.views.IndicatorTransformer;
-import com.sakebook.android.sample.parallaxsample.views.ParallaxTransformer;
 import com.sakebook.android.sample.parallaxsample.views.adapters.ParallaxPagerAdapter;
 
 public class TransformIndicatorActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener{
@@ -27,7 +21,7 @@ public class TransformIndicatorActivity extends AppCompatActivity implements Vie
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_transform_indocator);
+        setContentView(R.layout.activity_transform_indicator);
         initViewPager();
     }
 
