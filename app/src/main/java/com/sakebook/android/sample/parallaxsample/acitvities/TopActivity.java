@@ -38,6 +38,13 @@ public class TopActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        findViewById(R.id.button_parallax_animation).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TopActivity.this, ParallaxAnimationActivity.class);
+                startActivity(intent);
+            }
+        });
         findViewById(R.id.button_image).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

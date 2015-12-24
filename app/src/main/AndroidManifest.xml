@@ -27,6 +27,9 @@
         <activity
             android:name=".acitvities.TransformIndicatorActivity"
             android:theme="@style/TutorialTheme"/>
+        <activity
+            android:name=".acitvities.ParallaxAnimationActivity"
+            android:theme="@style/TutorialTheme"/>
     </application>
 
 </manifest>
