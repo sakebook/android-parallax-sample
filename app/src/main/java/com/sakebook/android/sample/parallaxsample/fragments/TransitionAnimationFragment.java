@@ -17,16 +17,19 @@ import com.sakebook.android.sample.parallaxsample.R;
 public class TransitionAnimationFragment extends Fragment {
     private static final String ARG_NUMBER = "number";
     private static final String ARG_LAYOUT = "layout";
+    private static final String ARG_TEXT = "text";
 
     private int number;
     private int layout;
+    private String text;
 
     public TransitionAnimationFragment() {
     }
 
-    public static TransitionAnimationFragment newInstance(int number, @LayoutRes int layout) {
+    public static TransitionAnimationFragment newInstance(String text, int number, @LayoutRes int layout) {
         TransitionAnimationFragment fragment = new TransitionAnimationFragment();
         Bundle args = new Bundle();
+        args.putString(ARG_TEXT, text);
         args.putInt(ARG_NUMBER, number);
         args.putInt(ARG_LAYOUT, layout);
         fragment.setArguments(args);
@@ -39,6 +42,7 @@ public class TransitionAnimationFragment extends Fragment {
         if (getArguments() != null) {
             number = getArguments().getInt(ARG_NUMBER);
             layout = getArguments().getInt(ARG_LAYOUT);
+            text = getArguments().getString(ARG_TEXT);
         }
     }
 
@@ -46,7 +50,7 @@ public class TransitionAnimationFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(layout, container, false);
-        ((TextView)view.findViewById(R.id.text_transition)).setText("" + number);
+        ((TextView)view.findViewById(R.id.text_transition)).setText(text);
         view.setBackgroundColor(Color.rgb((int) (Math.random() * 255), (int) (Math.random() * 255), (int) (Math.random() * 255)));
         view.setTag(number);
         return view;

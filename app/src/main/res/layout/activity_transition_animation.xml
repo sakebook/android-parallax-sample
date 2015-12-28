@@ -17,6 +17,7 @@
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:layout_above="@+id/view_pager"
+        android:elevation="8dp"
         android:background="@drawable/circle_hover"
         android:layout_width="@dimen/extra_large"
         android:layout_height="@dimen/extra_large"/>
@@ -24,6 +25,7 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/view_pager"
         android:layout_below="@id/space"
+        android:elevation="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />

@@ -51,7 +51,7 @@ public class TransitionAnimationActivity extends AppCompatActivity implements Vi
         morning[0] = 0;
         morning[1] = (point.y - (y / 2)) / 2;
         noon[0] = ((point.x - x) / 2);
-        noon[1] = ((point.y / 2) - (point.x / 2)) - x;
+        noon[1] = ((point.y / 2) - (point.x / 2)) - (x / 2);
         evening[0] = point.x - x;
         evening[1] = (point.y - (y / 2)) / 2;
         sun.setX(morning[0]);
@@ -68,9 +68,9 @@ public class TransitionAnimationActivity extends AppCompatActivity implements Vi
     }
 
     private SparseArray<Fragment> makeFragments() {
-        viewSparseArray.put(0, TransitionAnimationFragment.newInstance(0, R.layout.fragment_transition_animation_layout));
-        viewSparseArray.put(1, TransitionAnimationFragment.newInstance(1, R.layout.fragment_transition_animation_layout));
-        viewSparseArray.put(2, TransitionAnimationFragment.newInstance(2, R.layout.fragment_transition_animation_layout));
+        viewSparseArray.put(0, TransitionAnimationFragment.newInstance("Sun Rises", 0, R.layout.fragment_transition_animation_layout));
+        viewSparseArray.put(1, TransitionAnimationFragment.newInstance("Noon", 1, R.layout.fragment_transition_animation_layout));
+        viewSparseArray.put(2, TransitionAnimationFragment.newInstance("Sun Sets", 2, R.layout.fragment_transition_animation_layout));
         return viewSparseArray;
 
     }
@@ -84,8 +84,8 @@ public class TransitionAnimationActivity extends AppCompatActivity implements Vi
         float y = morning[1];
         path.moveTo(x + 0, y + 0);
         path.cubicTo(
-                noon[0] / 3, morning[1] / 3 * 2,
-                noon[0] / 3 * 2, morning[1] / 3,
+                noon[0] / 3, morning[1] / 4 * 2,
+                noon[0] / 3 * 2, morning[1] / 4,
                 noon[0], noon[1]
         );
         sunRisesPathMeasure.setPath(path, false);
@@ -104,8 +104,8 @@ public class TransitionAnimationActivity extends AppCompatActivity implements Vi
         float y = noon[1];
         path.moveTo(x + 0, y + 0);
         path.cubicTo(
-                noon[0] / 3 * 4, morning[1] / 3,
-                noon[0] / 3 * 5, morning[1] / 3 * 2,
+                noon[0] / 3 * 4, morning[1] / 4,
+                noon[0] / 3 * 5, morning[1] / 4 * 2,
                 evening[0], evening[1]
         );
         sunSetsPathMeasure.setPath(path, false);
