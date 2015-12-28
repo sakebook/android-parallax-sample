@@ -30,6 +30,10 @@
         <activity
             android:name=".acitvities.ParallaxAnimationActivity"
             android:theme="@style/TutorialTheme"/>
+        <activity
+            android:name=".acitvities.TransitionAnimationActivity"
+            android:theme="@style/TutorialTheme">
+        </activity>
     </application>
 
 </manifest>
