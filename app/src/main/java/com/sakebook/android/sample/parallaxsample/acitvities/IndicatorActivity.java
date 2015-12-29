@@ -11,13 +11,7 @@ import android.widget.TextView;
 
 import com.sakebook.android.sample.parallaxsample.fragments.IndicatorFragment;
 import com.sakebook.android.sample.parallaxsample.views.adapters.ParallaxPagerAdapter;
-import com.sakebook.android.sample.parallaxsample.views.ParallaxTransformer;
 import com.sakebook.android.sample.parallaxsample.R;
-import com.sakebook.android.sample.parallaxsample.fragments.FifthFragment;
-import com.sakebook.android.sample.parallaxsample.fragments.FirstFragment;
-import com.sakebook.android.sample.parallaxsample.fragments.FourthFragment;
-import com.sakebook.android.sample.parallaxsample.fragments.SecondFragment;
-import com.sakebook.android.sample.parallaxsample.fragments.ThirdFragment;
 
 public class IndicatorActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener, View.OnClickListener {
 
@@ -43,8 +37,6 @@ public class IndicatorActivity extends AppCompatActivity implements ViewPager.On
         adapter = new ParallaxPagerAdapter(fragmentManager, this, makeFragments());
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(this);
-//        viewPager.setPageMargin(getResources().getDimensionPixelSize(R.dimen.small_margin));
-//        viewPager.setPageTransformer(false, new ParallaxTransformer());
     }
 
     private SparseArray<Fragment> makeFragments() {

@@ -16,7 +16,6 @@ public class IndicatorTransformer implements ViewPager.PageTransformer{
         int width = view.getWidth();
         if (position <= -1) { // [-Infinity,-1)
             // This page is way off-screen to the left.
-//            view.setAlpha(0);
         } else if (-1 < position && position < 0) {
             // 左側に表示されてるView
             alpha = position + 1;
@@ -24,13 +23,11 @@ public class IndicatorTransformer implements ViewPager.PageTransformer{
             leftTransition(view, position, alpha);
         } else if (0 <= position && position <= 1) {
             // 右側に表示されてるView
-            Log.d("ParallaxSample", "id: " + view.getTag() + " position: " + position);
             alpha = 1 - position;
             view.findViewById(R.id.layout_indicator_transformer).setTranslationX(-width * position);
             rightTransition(view, position, alpha);
         } else { // (1,+Infinity]
             // This page is way off-screen to the right.
-//            view.setAlpha(0);
         }
     }
 

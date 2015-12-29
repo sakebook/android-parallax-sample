@@ -9,12 +9,10 @@ import android.util.SparseArray;
 
 import com.sakebook.android.sample.parallaxsample.R;
 import com.sakebook.android.sample.parallaxsample.fragments.ParallaxAnimationFragment;
-import com.sakebook.android.sample.parallaxsample.fragments.TransformIndicatorFragment;
 import com.sakebook.android.sample.parallaxsample.views.AnimationTransformer;
-import com.sakebook.android.sample.parallaxsample.views.IndicatorTransformer;
 import com.sakebook.android.sample.parallaxsample.views.adapters.ParallaxPagerAdapter;
 
-public class ParallaxAnimationActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener{
+public class ParallaxAnimationActivity extends AppCompatActivity{
 
     private ViewPager viewPager;
     private ParallaxPagerAdapter adapter;
@@ -32,7 +30,6 @@ public class ParallaxAnimationActivity extends AppCompatActivity implements View
         FragmentManager fragmentManager = getSupportFragmentManager();
         adapter = new ParallaxPagerAdapter(fragmentManager, this, makeFragments());
         viewPager.setAdapter(adapter);
-        viewPager.addOnPageChangeListener(this);
         viewPager.setPageTransformer(false, new AnimationTransformer());
     }
 
@@ -43,22 +40,6 @@ public class ParallaxAnimationActivity extends AppCompatActivity implements View
         viewSparseArray.put(3, ParallaxAnimationFragment.newInstance(15));
         viewSparseArray.put(4, ParallaxAnimationFragment.newInstance(15));
         return viewSparseArray;
-
-    }
-
-
-    @Override
-    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-    }
-
-    @Override
-    public void onPageSelected(int position) {
-
-    }
-
-    @Override
-    public void onPageScrollStateChanged(int state) {
 
     }
 }

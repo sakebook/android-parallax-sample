@@ -10,15 +10,9 @@ import android.util.SparseArray;
 import com.sakebook.android.sample.parallaxsample.fragments.ImageFragment;
 import com.sakebook.android.sample.parallaxsample.views.ImageTransformer;
 import com.sakebook.android.sample.parallaxsample.views.adapters.ParallaxPagerAdapter;
-import com.sakebook.android.sample.parallaxsample.views.ParallaxTransformer;
 import com.sakebook.android.sample.parallaxsample.R;
-import com.sakebook.android.sample.parallaxsample.fragments.FifthFragment;
-import com.sakebook.android.sample.parallaxsample.fragments.FirstFragment;
-import com.sakebook.android.sample.parallaxsample.fragments.FourthFragment;
-import com.sakebook.android.sample.parallaxsample.fragments.SecondFragment;
-import com.sakebook.android.sample.parallaxsample.fragments.ThirdFragment;
 
-public class ImageActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener{
+public class ImageActivity extends AppCompatActivity{
 
     private ViewPager viewPager;
     private ParallaxPagerAdapter adapter;
@@ -37,9 +31,6 @@ public class ImageActivity extends AppCompatActivity implements ViewPager.OnPage
         adapter = new ParallaxPagerAdapter(fragmentManager, this, makeFragments());
         viewPager.setAdapter(adapter);
         viewPager.setPageMargin(getResources().getDimensionPixelSize(R.dimen.small_margin));
-//        viewPager.setPageMarginDrawable(R.mipmap.ic_launcher);
-//        viewPager.setOffscreenPageLimit(4);
-        viewPager.addOnPageChangeListener(this);
         viewPager.setPageTransformer(false, new ImageTransformer());
     }
 
@@ -50,22 +41,6 @@ public class ImageActivity extends AppCompatActivity implements ViewPager.OnPage
         viewSparseArray.put(3, ImageFragment.newInstance("SKY and MILKWAY", 3, R.layout.fragment_image_layout, R.drawable.omerunlu, "https://www.flickr.com/photos/55293400@N07/"));
         viewSparseArray.put(4, ImageFragment.newInstance("Lovely sky", 4, R.layout.fragment_image_layout, R.drawable.malhotraxtreme, "https://www.flickr.com/photos/malhotraxtreme/"));
         return viewSparseArray;
-
-    }
-
-
-    @Override
-    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-    }
-
-    @Override
-    public void onPageSelected(int position) {
-
-    }
-
-    @Override
-    public void onPageScrollStateChanged(int state) {
 
     }
 }

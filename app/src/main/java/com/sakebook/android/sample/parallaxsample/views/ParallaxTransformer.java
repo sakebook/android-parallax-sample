@@ -1,15 +1,7 @@
 package com.sakebook.android.sample.parallaxsample.views;
 
-import android.graphics.Color;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.View;
-import android.view.ViewParent;
-import android.widget.TextView;
-
-import com.sakebook.android.sample.parallaxsample.FragmentViewHolder;
-import com.sakebook.android.sample.parallaxsample.R;
-import com.sakebook.android.sample.parallaxsample.fragments.ThirdFragment;
 
 /**
  * Created by sakemotoshinya on 15/12/16.
@@ -20,41 +12,40 @@ public class ParallaxTransformer implements ViewPager.PageTransformer{
         float alpha = 0;
         if (position < -1) { // [-Infinity,-1)
             // This page is way off-screen to the left.
-//            view.setAlpha(0);
         } else if (-1 < position && position < 0) {
-            // 左にスワイプ
+            // 左側に表示されてるView
             alpha = position + 1;
             viewTransition(view, position, alpha);
         } else if (0 <= position && position <= 1) {
-            // 右にスワイプ
+            // 右側に表示されてるView
             alpha = 1 - position;
             viewTransition(view, position, alpha);
         } else { // (1,+Infinity]
             // This page is way off-screen to the right.
-//            view.setAlpha(0);
         }
     }
 
     private void viewTransition(View view, float position, float alpha) {
-        switch (view.getId()) {
-            case R.id.layout_first:
-                firstTransition(view, position, alpha);
-                break;
-            case R.id.layout_second:
-                secondTransition(view, position, alpha);
-                break;
-            case R.id.layout_third:
-                thirdTransition(view, position, alpha);
-                break;
-            case R.id.layout_fourth:
-                fourthTransition(view, position, alpha);
-                break;
-            case R.id.layout_fifth:
-                fifthTransition(view, position, alpha);
-                break;
-        }
+//        switch (view.getId()) {
+//            case R.id.layout_first:
+//                firstTransition(view, position, alpha);
+//                break;
+//            case R.id.layout_second:
+//                secondTransition(view, position, alpha);
+//                break;
+//            case R.id.layout_third:
+//                thirdTransition(view, position, alpha);
+//                break;
+//            case R.id.layout_fourth:
+//                fourthTransition(view, position, alpha);
+//                break;
+//            case R.id.layout_fifth:
+//                fifthTransition(view, position, alpha);
+//                break;
+//        }
     }
 
+    /*
     private void firstTransition(View view, float position, float alpha) {
         FragmentViewHolder.FirstViewHolder holder;
         if (view.getTag() == null) {
@@ -124,4 +115,5 @@ public class ParallaxTransformer implements ViewPager.PageTransformer{
         holder.title.setTranslationX(- width * position);
         holder.backImage.setTranslationX(- width / 2 * position);
     }
+    */
 }

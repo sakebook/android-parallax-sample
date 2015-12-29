@@ -8,7 +8,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.SparseArray;
 import android.view.Display;
 import android.view.View;
@@ -64,13 +63,12 @@ public class TransitionAnimationActivity extends AppCompatActivity implements Vi
         adapter = new ParallaxPagerAdapter(fragmentManager, this, makeFragments());
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(this);
-//        viewPager.setPageTransformer(false, new TransitionTransformer());
     }
 
     private SparseArray<Fragment> makeFragments() {
-        viewSparseArray.put(0, TransitionAnimationFragment.newInstance("Sun Rises", 0, R.layout.fragment_transition_animation_layout));
+        viewSparseArray.put(0, TransitionAnimationFragment.newInstance("Sun Rise", 0, R.layout.fragment_transition_animation_layout));
         viewSparseArray.put(1, TransitionAnimationFragment.newInstance("Noon", 1, R.layout.fragment_transition_animation_layout));
-        viewSparseArray.put(2, TransitionAnimationFragment.newInstance("Sun Sets", 2, R.layout.fragment_transition_animation_layout));
+        viewSparseArray.put(2, TransitionAnimationFragment.newInstance("Sun Set", 2, R.layout.fragment_transition_animation_layout));
         return viewSparseArray;
 
     }
@@ -84,7 +82,7 @@ public class TransitionAnimationActivity extends AppCompatActivity implements Vi
         float y = morning[1];
         path.moveTo(x + 0, y + 0);
         path.cubicTo(
-                noon[0] / 3, morning[1] / 4 * 2,
+                noon[0] / 3, morning[1] / 5 * 2,
                 noon[0] / 3 * 2, morning[1] / 4,
                 noon[0], noon[1]
         );
@@ -105,7 +103,7 @@ public class TransitionAnimationActivity extends AppCompatActivity implements Vi
         path.moveTo(x + 0, y + 0);
         path.cubicTo(
                 noon[0] / 3 * 4, morning[1] / 4,
-                noon[0] / 3 * 5, morning[1] / 4 * 2,
+                noon[0] / 3 * 5, morning[1] / 5 * 2,
                 evening[0], evening[1]
         );
         sunSetsPathMeasure.setPath(path, false);
@@ -117,7 +115,6 @@ public class TransitionAnimationActivity extends AppCompatActivity implements Vi
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-        Log.d("onPageScrolled", "position: " + position + ", positionOffset: " + positionOffset + ", positionOffsetPixels: " + positionOffsetPixels);
         if (position == 0) {
             sunRises(positionOffset);
         } else if (position == 1) {

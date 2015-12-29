@@ -12,7 +12,7 @@ import com.sakebook.android.sample.parallaxsample.fragments.TransformIndicatorFr
 import com.sakebook.android.sample.parallaxsample.views.IndicatorTransformer;
 import com.sakebook.android.sample.parallaxsample.views.adapters.ParallaxPagerAdapter;
 
-public class TransformIndicatorActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener{
+public class TransformIndicatorActivity extends AppCompatActivity{
 
     private ViewPager viewPager;
     private ParallaxPagerAdapter adapter;
@@ -30,7 +30,6 @@ public class TransformIndicatorActivity extends AppCompatActivity implements Vie
         FragmentManager fragmentManager = getSupportFragmentManager();
         adapter = new ParallaxPagerAdapter(fragmentManager, this, makeFragments());
         viewPager.setAdapter(adapter);
-        viewPager.addOnPageChangeListener(this);
         viewPager.setPageTransformer(false, new IndicatorTransformer());
     }
 
@@ -41,22 +40,6 @@ public class TransformIndicatorActivity extends AppCompatActivity implements Vie
         viewSparseArray.put(3, TransformIndicatorFragment.newInstance("3"));
         viewSparseArray.put(4, TransformIndicatorFragment.newInstance("4"));
         return viewSparseArray;
-
-    }
-
-
-    @Override
-    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-    }
-
-    @Override
-    public void onPageSelected(int position) {
-
-    }
-
-    @Override
-    public void onPageScrollStateChanged(int state) {
 
     }
 }
