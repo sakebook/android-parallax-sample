@@ -10,7 +10,6 @@
         android:id="@+id/image_back"
         android:layout_centerInParent="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/beach"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
