@@ -2,7 +2,6 @@ package com.sakebook.android.sample.parallaxsample.fragments;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.StringRes;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;

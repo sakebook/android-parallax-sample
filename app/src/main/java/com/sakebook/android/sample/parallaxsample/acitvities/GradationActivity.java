@@ -16,7 +16,6 @@ import com.sakebook.android.sample.parallaxsample.fragments.GradationFragment;
 public class GradationActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener{
 
     private ViewPager viewPager;
-    private ParallaxPagerAdapter adapter;
     private SparseArray<Fragment> viewSparseArray = new SparseArray<>();
     private ArgbEvaluator mArgbEvaluator = new ArgbEvaluator();
     private Integer[] colors;
@@ -30,7 +29,7 @@ public class GradationActivity extends AppCompatActivity implements ViewPager.On
     }
 
     private void initColor() {
-        Integer[] colors = {
+        this.colors = new Integer[]{
                 ContextCompat.getColor(this, R.color.red),
                 ContextCompat.getColor(this, R.color.green),
                 ContextCompat.getColor(this, R.color.purple),
@@ -38,13 +37,12 @@ public class GradationActivity extends AppCompatActivity implements ViewPager.On
                 ContextCompat.getColor(this, R.color.blue),
                 ContextCompat.getColor(this, R.color.orange), // for end evaluate
         };
-        this.colors = colors;
     }
 
     private void initViewPager() {
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         FragmentManager fragmentManager = getSupportFragmentManager();
-        adapter = new ParallaxPagerAdapter(fragmentManager, this, makeFragments());
+        ParallaxPagerAdapter adapter = new ParallaxPagerAdapter(fragmentManager, this, makeFragments());
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(this);
     }

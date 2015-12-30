@@ -11,12 +11,13 @@ import android.util.SparseArray;
  */
 public class ParallaxPagerAdapter extends FragmentPagerAdapter{
 
-    private Context mContext;
+    private Context context;
+
     private SparseArray<Fragment> sparseArray = new SparseArray<>();
 
     public ParallaxPagerAdapter(FragmentManager fm, Context context, SparseArray<Fragment> fragments) {
         super(fm);
-        mContext = context;
+        this.context = context;
         this.sparseArray = fragments;
     }
 

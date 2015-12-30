@@ -14,8 +14,6 @@ import com.sakebook.android.sample.parallaxsample.R;
 
 public class ImageActivity extends AppCompatActivity{
 
-    private ViewPager viewPager;
-    private ParallaxPagerAdapter adapter;
     private SparseArray<Fragment> viewSparseArray = new SparseArray<>();
 
     @Override
@@ -26,9 +24,9 @@ public class ImageActivity extends AppCompatActivity{
     }
 
     private void initViewPager() {
-        viewPager = (ViewPager) findViewById(R.id.view_pager);
+        ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
         FragmentManager fragmentManager = getSupportFragmentManager();
-        adapter = new ParallaxPagerAdapter(fragmentManager, this, makeFragments());
+        ParallaxPagerAdapter adapter = new ParallaxPagerAdapter(fragmentManager, this, makeFragments());
         viewPager.setAdapter(adapter);
         viewPager.setPageMargin(getResources().getDimensionPixelSize(R.dimen.small_margin));
         viewPager.setPageTransformer(false, new ImageTransformer());

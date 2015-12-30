@@ -16,7 +16,6 @@ import com.sakebook.android.sample.parallaxsample.R;
 public class IndicatorActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener, View.OnClickListener {
 
     private ViewPager viewPager;
-    private ParallaxPagerAdapter adapter;
     private SparseArray<Fragment> viewSparseArray = new SparseArray<>();
     private View indicatorFloatView;
     private float indicatorSpace;
@@ -34,7 +33,7 @@ public class IndicatorActivity extends AppCompatActivity implements ViewPager.On
     private void initViewPager() {
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         FragmentManager fragmentManager = getSupportFragmentManager();
-        adapter = new ParallaxPagerAdapter(fragmentManager, this, makeFragments());
+        ParallaxPagerAdapter adapter = new ParallaxPagerAdapter(fragmentManager, this, makeFragments());
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(this);
     }
@@ -96,7 +95,6 @@ public class IndicatorActivity extends AppCompatActivity implements ViewPager.On
     private void next() {
         if (viewPager.getCurrentItem() != viewSparseArray.size()) {
             viewPager.setCurrentItem(viewPager.getCurrentItem() + 1, true);
-            return;
         }
     }
 

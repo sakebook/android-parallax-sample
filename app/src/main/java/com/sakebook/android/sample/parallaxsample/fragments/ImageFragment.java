@@ -1,7 +1,6 @@
 package com.sakebook.android.sample.parallaxsample.fragments;
 
 import android.graphics.Color;
-import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.LayoutRes;
