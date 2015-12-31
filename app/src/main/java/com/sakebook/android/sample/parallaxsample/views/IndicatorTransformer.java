@@ -37,6 +37,7 @@ public class IndicatorTransformer implements ViewPager.PageTransformer{
         View indicator4 = view.findViewById(R.id.view_indicator_4);
         View indicator5 = view.findViewById(R.id.view_indicator_5);
 
+        // use tag or layout id
         switch ((int)view.getTag()) {
             case 0:
                 indicator1.setScaleX(2 + position);
@@ -76,6 +77,7 @@ public class IndicatorTransformer implements ViewPager.PageTransformer{
         View indicator4 = view.findViewById(R.id.view_indicator_4);
         View indicator5 = view.findViewById(R.id.view_indicator_5);
 
+        // use tag or layout id
         switch ((int)view.getTag()) {
             case 0:
                 indicator1.setScaleX(2 - position);

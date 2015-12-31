@@ -25,7 +25,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/middle_margin"
             android:padding="@dimen/middle_margin"
-            android:text="skip"
+            android:text="@string/footer_skip"
             android:textColor="@android:color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -36,7 +36,7 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/middle_margin"
             android:padding="@dimen/middle_margin"
-            android:text="next"
+            android:text="@string/footer_next"
             android:textColor="@android:color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
