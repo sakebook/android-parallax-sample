@@ -48,11 +48,11 @@ public class GradationActivity extends AppCompatActivity implements ViewPager.On
     }
 
     private SparseArray<Fragment> makeFragments() {
-        viewSparseArray.put(0, GradationFragment.newInstance(R.string.red_title));
-        viewSparseArray.put(1, GradationFragment.newInstance(R.string.green_title));
-        viewSparseArray.put(2, GradationFragment.newInstance(R.string.purple_title));
-        viewSparseArray.put(3, GradationFragment.newInstance(R.string.orange_title));
-        viewSparseArray.put(4, GradationFragment.newInstance(R.string.blue_title));
+        viewSparseArray.put(0, GradationFragment.newInstance(R.string.gradation_title_red));
+        viewSparseArray.put(1, GradationFragment.newInstance(R.string.gradation_title_green));
+        viewSparseArray.put(2, GradationFragment.newInstance(R.string.gradation_title_purple));
+        viewSparseArray.put(3, GradationFragment.newInstance(R.string.gradation_title_orange));
+        viewSparseArray.put(4, GradationFragment.newInstance(R.string.gradation_title_blue));
         return viewSparseArray;
     }
 

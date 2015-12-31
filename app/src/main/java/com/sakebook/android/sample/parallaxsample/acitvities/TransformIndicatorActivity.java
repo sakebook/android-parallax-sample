@@ -32,11 +32,11 @@ public class TransformIndicatorActivity extends AppCompatActivity{
     }
 
     private SparseArray<Fragment> makeFragments() {
-        viewSparseArray.put(0, TransformIndicatorFragment.newInstance("0"));
-        viewSparseArray.put(1, TransformIndicatorFragment.newInstance("1"));
-        viewSparseArray.put(2, TransformIndicatorFragment.newInstance("2"));
-        viewSparseArray.put(3, TransformIndicatorFragment.newInstance("3"));
-        viewSparseArray.put(4, TransformIndicatorFragment.newInstance("4"));
+        viewSparseArray.put(0, TransformIndicatorFragment.newInstance("zero", 0));
+        viewSparseArray.put(1, TransformIndicatorFragment.newInstance("one", 1));
+        viewSparseArray.put(2, TransformIndicatorFragment.newInstance("two", 2));
+        viewSparseArray.put(3, TransformIndicatorFragment.newInstance("three", 3));
+        viewSparseArray.put(4, TransformIndicatorFragment.newInstance("four", 4));
         return viewSparseArray;
 
     }

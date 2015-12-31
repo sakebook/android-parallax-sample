@@ -16,12 +16,12 @@ public class IndicatorTransformer implements ViewPager.PageTransformer{
         if (position <= -1) { // [-Infinity,-1)
             // This page is way off-screen to the left.
         } else if (-1 < position && position < 0) {
-            // 左側に表示されてるView
+            // left side shown View
             alpha = position + 1;
             view.findViewById(R.id.layout_indicator_transformer).setTranslationX(-width * position);
             leftTransition(view, position, alpha);
         } else if (0 <= position && position <= 1) {
-            // 右側に表示されてるView
+            // right side shown View
             alpha = 1 - position;
             view.findViewById(R.id.layout_indicator_transformer).setTranslationX(-width * position);
             rightTransition(view, position, alpha);
@@ -37,39 +37,34 @@ public class IndicatorTransformer implements ViewPager.PageTransformer{
         View indicator4 = view.findViewById(R.id.view_indicator_4);
         View indicator5 = view.findViewById(R.id.view_indicator_5);
 
-        switch (Integer.parseInt((String) view.getTag())) {
+        switch ((int)view.getTag()) {
             case 0:
                 indicator1.setScaleX(2 + position);
                 indicator1.setScaleY(2 + position);
                 indicator2.setScaleX(1 - position);
                 indicator2.setScaleY(1 - position);
-
                 break;
             case 1:
                 indicator2.setScaleX(2 + position);
                 indicator2.setScaleY(2 + position);
                 indicator3.setScaleX(1 - position);
                 indicator3.setScaleY(1 - position);
-
                 break;
             case 2:
                 indicator3.setScaleX(2 + position);
                 indicator3.setScaleY(2 + position);
                 indicator4.setScaleX(1 - position);
                 indicator4.setScaleY(1 - position);
-
                 break;
             case 3:
                 indicator4.setScaleX(2 + position);
                 indicator4.setScaleY(2 + position);
                 indicator5.setScaleX(1 - position);
                 indicator5.setScaleY(1 - position);
-
                 break;
             case 4:
                 indicator5.setScaleX(2 + position);
                 indicator5.setScaleY(2 + position);
-
                 break;
         }
     }
@@ -81,11 +76,10 @@ public class IndicatorTransformer implements ViewPager.PageTransformer{
         View indicator4 = view.findViewById(R.id.view_indicator_4);
         View indicator5 = view.findViewById(R.id.view_indicator_5);
 
-        switch (Integer.parseInt((String) view.getTag())) {
+        switch ((int)view.getTag()) {
             case 0:
                 indicator1.setScaleX(2 - position);
                 indicator1.setScaleY(2 - position);
-
                 break;
             case 1:
                 indicator1.setScaleX(1 + position);
@@ -98,26 +92,19 @@ public class IndicatorTransformer implements ViewPager.PageTransformer{
                 indicator2.setScaleY(1 + position);
                 indicator3.setScaleX(2 - position);
                 indicator3.setScaleY(2 - position);
-
                 break;
             case 3:
                 indicator3.setScaleX(1 + position);
                 indicator3.setScaleY(1 + position);
                 indicator4.setScaleX(2 - position);
                 indicator4.setScaleY(2 - position);
-
                 break;
             case 4:
                 indicator4.setScaleX(1 + position);
                 indicator4.setScaleY(1 + position);
                 indicator5.setScaleX(2 - position);
                 indicator5.setScaleY(2 - position);
-
                 break;
         }
     }
-
-
-
-
 }

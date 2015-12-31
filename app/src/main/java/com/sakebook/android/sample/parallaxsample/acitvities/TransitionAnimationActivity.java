@@ -45,6 +45,7 @@ public class TransitionAnimationActivity extends AppCompatActivity implements Vi
         View sun = findViewById(R.id.sun);
         float x = sun.getWidth();
         float y = sun.getHeight();
+
         morning[0] = 0;
         morning[1] = (point.y - (y / 2)) / 2;
         noon[0] = ((point.x - x) / 2);

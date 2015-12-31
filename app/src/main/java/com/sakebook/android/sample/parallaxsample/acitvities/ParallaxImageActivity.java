@@ -12,14 +12,14 @@ import com.sakebook.android.sample.parallaxsample.views.ImageTransformer;
 import com.sakebook.android.sample.parallaxsample.views.adapters.ParallaxPagerAdapter;
 import com.sakebook.android.sample.parallaxsample.R;
 
-public class ImageActivity extends AppCompatActivity{
+public class ParallaxImageActivity extends AppCompatActivity{
 
     private SparseArray<Fragment> viewSparseArray = new SparseArray<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_image);
+        setContentView(R.layout.activity_parallax_image);
         initViewPager();
     }
 
@@ -33,11 +33,11 @@ public class ImageActivity extends AppCompatActivity{
     }
 
     private SparseArray<Fragment> makeFragments() {
-        viewSparseArray.put(0, ImageFragment.newInstance("Sunset Sky", 0, R.layout.fragment_image_layout, R.drawable.peterliuphoto, "https://www.flickr.com/photos/peterliuphoto/"));
-        viewSparseArray.put(1, ImageFragment.newInstance("Nothing Like a Litte Blue Skies", 1, R.layout.fragment_image_layout, R.drawable.christopherf, "https://www.flickr.com/photos/christopherf/"));
-        viewSparseArray.put(2, ImageFragment.newInstance("HDR Skies", 2, R.layout.fragment_image_layout, R.drawable.ryandesiderio, "https://www.flickr.com/photos/ryandesiderio/"));
-        viewSparseArray.put(3, ImageFragment.newInstance("SKY and MILKWAY", 3, R.layout.fragment_image_layout, R.drawable.omerunlu, "https://www.flickr.com/photos/55293400@N07/"));
-        viewSparseArray.put(4, ImageFragment.newInstance("Lovely sky", 4, R.layout.fragment_image_layout, R.drawable.malhotraxtreme, "https://www.flickr.com/photos/malhotraxtreme/"));
+        viewSparseArray.put(0, ImageFragment.newInstance(getString(R.string.flickr_title_peterliuphoto), 0, R.layout.fragment_image_layout, R.drawable.peterliuphoto, getString(R.string.flickr_url_peterliuphoto)));
+        viewSparseArray.put(1, ImageFragment.newInstance(getString(R.string.flickr_title_christopherf), 1, R.layout.fragment_image_layout, R.drawable.christopherf, getString(R.string.flickr_url_christopherf)));
+        viewSparseArray.put(2, ImageFragment.newInstance(getString(R.string.flickr_title_ryandesiderio), 2, R.layout.fragment_image_layout, R.drawable.ryandesiderio, getString(R.string.flickr_url_ryandesiderio)));
+        viewSparseArray.put(3, ImageFragment.newInstance(getString(R.string.flickr_title_omerunlu), 3, R.layout.fragment_image_layout, R.drawable.omerunlu, getString(R.string.flickr_url_omerunlu)));
+        viewSparseArray.put(4, ImageFragment.newInstance(getString(R.string.flickr_title_malhotraxtreme), 4, R.layout.fragment_image_layout, R.drawable.malhotraxtreme, getString(R.string.flickr_url_malhotraxtreme)));
         return viewSparseArray;
 
     }

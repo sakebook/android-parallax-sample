@@ -15,6 +15,7 @@ import com.sakebook.android.sample.parallaxsample.views.adapters.ParallaxPagerAd
 public class ParallaxAnimationActivity extends AppCompatActivity{
 
     private SparseArray<Fragment> viewSparseArray = new SparseArray<>();
+    private final static int COUNT = 15;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +33,11 @@ public class ParallaxAnimationActivity extends AppCompatActivity{
     }
 
     private SparseArray<Fragment> makeFragments() {
-        viewSparseArray.put(0, ParallaxAnimationFragment.newInstance(15));
-        viewSparseArray.put(1, ParallaxAnimationFragment.newInstance(15));
-        viewSparseArray.put(2, ParallaxAnimationFragment.newInstance(15));
-        viewSparseArray.put(3, ParallaxAnimationFragment.newInstance(15));
-        viewSparseArray.put(4, ParallaxAnimationFragment.newInstance(15));
+        viewSparseArray.put(0, ParallaxAnimationFragment.newInstance(COUNT));
+        viewSparseArray.put(1, ParallaxAnimationFragment.newInstance(COUNT));
+        viewSparseArray.put(2, ParallaxAnimationFragment.newInstance(COUNT));
+        viewSparseArray.put(3, ParallaxAnimationFragment.newInstance(COUNT));
+        viewSparseArray.put(4, ParallaxAnimationFragment.newInstance(COUNT));
         return viewSparseArray;
 
     }

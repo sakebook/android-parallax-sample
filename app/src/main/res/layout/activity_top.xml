@@ -14,7 +14,7 @@
         android:id="@+id/button_gradation"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
-        android:text="to gradation"
+        android:text="@string/title_gradation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -22,7 +22,7 @@
         android:id="@+id/button_indicator"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/button_gradation"
-        android:text="to indicator"
+        android:text="@string/title_indicator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -30,7 +30,7 @@
         android:id="@+id/button_transform_indicator"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/button_indicator"
-        android:text="to transform indicator"
+        android:text="@string/title_transform_indicator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -38,7 +38,7 @@
         android:id="@+id/button_parallax_animation"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/button_transform_indicator"
-        android:text="to parallax animation"
+        android:text="@string/title_parallax_animation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -46,7 +46,7 @@
         android:id="@+id/button_transition_animation"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/button_parallax_animation"
-        android:text="to transition animation"
+        android:text="@string/title_transition_animation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -54,7 +54,7 @@
         android:id="@+id/button_image"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/button_transition_animation"
-        android:text="to image"
+        android:text="@string/title_parallax_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

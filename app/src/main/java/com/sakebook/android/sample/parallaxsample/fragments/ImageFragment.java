@@ -27,7 +27,7 @@ public class ImageFragment extends Fragment {
     private int layout;
     private int drawable;
     private String text;
-    private String auther;
+    private String author;
 
     public ImageFragment() {
     }
@@ -52,7 +52,7 @@ public class ImageFragment extends Fragment {
             layout = getArguments().getInt(ARG_LAYOUT);
             text = getArguments().getString(ARG_TEXT);
             drawable = getArguments().getInt(ARG_DRAWABLE);
-            auther = getArguments().getString(ARG_AUTHOR);
+            author = getArguments().getString(ARG_AUTHOR);
         }
     }
 
@@ -67,7 +67,7 @@ public class ImageFragment extends Fragment {
         holder.title.setText(number + "");
         holder.subTitle.setText(text);
         holder.backImage.setImageResource(drawable);
-        holder.author.setText(auther);
+        holder.author.setText(author);
         view.setBackgroundColor(Color.rgb((int) (Math.random() * 255), (int) (Math.random() * 255), (int) (Math.random() * 255)));
         return view;
     }

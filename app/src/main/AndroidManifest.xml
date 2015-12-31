@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".acitvities.ImageActivity"
+            android:name=".acitvities.ParallaxImageActivity"
             android:theme="@style/TutorialTheme"/>
         <activity
             android:name=".acitvities.GradationActivity"

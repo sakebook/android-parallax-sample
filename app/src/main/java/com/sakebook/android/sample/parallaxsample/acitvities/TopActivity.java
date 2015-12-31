@@ -55,7 +55,7 @@ public class TopActivity extends AppCompatActivity {
         findViewById(R.id.button_image).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TopActivity.this, ImageActivity.class);
+                Intent intent = new Intent(TopActivity.this, ParallaxImageActivity.class);
                 startActivity(intent);
             }
         });

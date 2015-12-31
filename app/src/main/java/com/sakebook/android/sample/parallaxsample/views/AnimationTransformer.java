@@ -14,11 +14,11 @@ public class AnimationTransformer implements ViewPager.PageTransformer {
         if (position <= -1) { // [-Infinity,-1)
             // This page is way off-screen to the left.
         } else if (-1 < position && position < 0) {
-            // 左側に表示されてるView
+            // left side shown View
             alpha = position + 1;
             viewTransition(view, position, alpha);
         } else if (0 <= position && position <= 1) {
-            // 右側に表示されてるView
+            // right side shown View
             alpha = 1 - position;
             viewTransition(view, position, alpha);
         } else { // (1,+Infinity]

@@ -66,15 +66,15 @@ public class IndicatorActivity extends AppCompatActivity implements ViewPager.On
     @Override
     public void onPageSelected(int position) {
         if (position == 0) {
-            back.setText("skip");
+            back.setText(getString(R.string.footer_skip));
         } else {
-            back.setText("back");
+            back.setText(getString(R.string.footer_back));
         }
 
         if (viewSparseArray.size() == (position + 1)) {
-            next.setText("Go!");
+            next.setText(getString(R.string.footer_go));
         } else {
-            next.setText("next");
+            next.setText(getString(R.string.footer_next));
         }
     }
 

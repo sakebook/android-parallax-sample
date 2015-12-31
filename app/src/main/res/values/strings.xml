@@ -1,12 +1,37 @@
 <resources>
     <string name="app_name">ParallaxSample</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="red_title">This is red</string>
-    <string name="green_title">This is green</string>
-    <string name="purple_title">This is purple</string>
-    <string name="orange_title">This is orange</string>
-    <string name="blue_title">This is blue</string>
+    <!-- titles -->
+    <string name="title_gradation">Gradation</string>
+    <string name="title_indicator">Indicator</string>
+    <string name="title_transform_indicator">Transform Indicator</string>
+    <string name="title_parallax_animation">Parallax Animation</string>
+    <string name="title_transition_animation">Transition Animation</string>
+    <string name="title_parallax_image">Parallax Image</string>
+
+    <!-- Gradation -->
+    <string name="gradation_title_red">This is red</string>
+    <string name="gradation_title_green">This is green</string>
+    <string name="gradation_title_purple">This is purple</string>
+    <string name="gradation_title_orange">This is orange</string>
+    <string name="gradation_title_blue">This is blue</string>
+
+    <!-- flickr -->
+    <string name="flickr_title_peterliuphoto">Sunset Sky</string>
+    <string name="flickr_url_peterliuphoto">https://www.flickr.com/photos/peterliuphoto/</string>
+    <string name="flickr_title_christopherf">"Nothing Like a Litte Blue Skies</string>
+    <string name="flickr_url_christopherf">https://www.flickr.com/photos/christopherf/</string>
+    <string name="flickr_title_ryandesiderio">HDR Skies</string>
+    <string name="flickr_url_ryandesiderio">https://www.flickr.com/photos/ryandesiderio/</string>
+    <string name="flickr_title_omerunlu">SKY and MILKWAY</string>
+    <string name="flickr_url_omerunlu">https://www.flickr.com/photos/55293400@N07/</string>
+    <string name="flickr_title_malhotraxtreme">Lovely sky</string>
+    <string name="flickr_url_malhotraxtreme">https://www.flickr.com/photos/malhotraxtreme/</string>
+
+    <!-- indicator -->
+    <string name="footer_skip">skip</string>
+    <string name="footer_go">Go!</string>
+    <string name="footer_back">back</string>
+    <string name="footer_next">next</string>
 
 </resources>
