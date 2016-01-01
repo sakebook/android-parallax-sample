@@ -29,5 +29,4 @@ Parallax ViewPager sample on Android
 More at [this post](http://sakebook.hatenablog.com/entry/2016/01/02/011251) (only Japanese)
 
 ## [License](LICENSE)
-Copyright (c) 2015-2016 Shinya Sakemoto & The Core Less Team
-Licensed under the [Apache License](LICENSE).
+Copyright (c) 2015-2016 Shinya Sakemoto Licensed under the [Apache License](LICENSE).
